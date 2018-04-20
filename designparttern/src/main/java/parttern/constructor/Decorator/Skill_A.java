@@ -9,6 +9,7 @@ public class Skill_A extends Skills{
         super(hero);
     }
 
+    //sd
     @Override
     public void learnSkills(){
         super.learnSkills();
