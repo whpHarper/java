@@ -15,7 +15,7 @@ public class CuratorWatcher {
     private static final String ZK_PATH = "/zktest";
 
     public static void main(String[] args) throws Exception {
-        // 1.Connect to zk
+        // 1.创建Client端
         CuratorFramework client = CuratorFrameworkFactory.newClient(
                 ZK_ADDRESS,
                 new RetryNTimes(10, 5000)
@@ -23,7 +23,7 @@ public class CuratorWatcher {
         client.start();
         System.out.println("zk client start successfully!");
 
-        // 2.Register watcher
+        // 2.创建zk的监听器
         PathChildrenCache watcher = new PathChildrenCache(
                 client,
                 ZK_PATH,
