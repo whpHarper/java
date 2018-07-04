@@ -48,6 +48,7 @@ public class SaveToMysqlBolt implements IRichBolt {
     domain.setOwner(strArry[4]);
     Connection conn = null;
     Statement stmt = null;
+    if((domain.getDomain().contains("net")||domain.getDomain().contains("com")||domain.getDomain().contains("org")||domain.getDomain().contains("cn")) && (domain.getPrice()>200.0 && domain.getPrice()<2000.0))
     try {
       conn = provider.getConnection();
       stmt = conn.createStatement() ;
