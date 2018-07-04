@@ -15,7 +15,7 @@ import java.util.Map;
  * @author merlin
  * @create 2017-09-27 下午3:11
  */
-public class WordCounter implements IRichBolt {
+public class SaveToMysqlBolt implements IRichBolt {
   private  Integer id;
   private String name;
   private Map<String,Integer> counters;

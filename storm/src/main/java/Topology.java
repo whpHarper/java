@@ -10,7 +10,7 @@ public class Topology {
         TopologyBuilder builder = new TopologyBuilder();
         builder.setSpout("word-reader", new WordReaderSpout());
         builder.setBolt("word-normalizer", new WordNormalizer()).shuffleGrouping("word-reader");
-        builder.setBolt("word-counter", new WordCounter()).shuffleGrouping("word-normalizer");
+        builder.setBolt("word-counter", new SaveToMysqlBolt()).shuffleGrouping("word-normalizer");
         Config conf = new Config();
         conf.put(Config.TOPOLOGY_MAX_TASK_PARALLELISM, 1);
         //conf.put(Config.STORM_LOCAL_DIR,"/Users/merlin/Documents/eclipse-workspace/ideaProject/hive-resource/src/test/java/com/example/demo/storm");
