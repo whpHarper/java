@@ -22,7 +22,6 @@ public class UserLogInfo {
     }
 
     public static String createFile() {
-
         try {
             if (strLogFileName == null || strLogFileName.length() < 1 || !exists(strLogFileName)) {
                 strLogFileName = System.getProperty("user.dir");
