@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 
 /**
- * Created by shibingxin on 2017/12/28.
+ * Created by whp on 2017/12/28.
  */
 public class CtrCommond {
 

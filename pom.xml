@@ -13,6 +13,7 @@
         <module>curator</module>
         <module>hadoop</module>
         <module>storm</module>
+        <module>utils</module>
     </modules>
 
     <properties>

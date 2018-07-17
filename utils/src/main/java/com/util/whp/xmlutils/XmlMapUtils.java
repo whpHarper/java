@@ -11,7 +11,7 @@ import java.util.*;
 
 
 /**
- * Created by shibingxin on 2018/7/5.
+ * Created by whp on 2018/7/5.
  */
 public class XmlMapUtils {
   public static void main(String[] args) throws DocumentException, IOException {
