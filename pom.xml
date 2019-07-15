@@ -16,6 +16,7 @@
         <module>utils</module>
         <module>bases</module>
         <module>kafka</module>
+        <module>concurrent</module>
     </modules>
 
     <properties>
