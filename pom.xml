@@ -31,6 +31,7 @@
         <mapr-storm-kafka.version>1.0.1</mapr-storm-kafka.version>
         <scala.version>2.11</scala.version>
         <kafka.version>0.10.0.0</kafka.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
 
