@@ -11,18 +11,24 @@
 
     <artifactId>kafka</artifactId>
 
+    <properties>
+        <kafka.version>2.1.0</kafka.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
+            <artifactId>streams-quickstart-java</artifactId>
+            <version>${kafka.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.11</artifactId>
+            <artifactId>kafka_2.12</artifactId>
+            <version>${kafka.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.storm</groupId>
-            <artifactId>storm-kafka</artifactId>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-streams</artifactId>
+            <version>${kafka.version}</version>
         </dependency>
     </dependencies>
 </project>
