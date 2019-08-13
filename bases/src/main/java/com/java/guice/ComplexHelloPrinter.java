@@ -1,0 +1,12 @@
+package com.java.guice;
+
+import javax.inject.Singleton;
+
+@Singleton
+public class ComplexHelloPrinter implements IHelloPrinter{
+    @Override
+    public void print() {
+        System.out.println("hello,complex hello printer");
+    }
+
+}

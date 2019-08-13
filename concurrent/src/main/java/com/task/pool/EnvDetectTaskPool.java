@@ -5,6 +5,9 @@ import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
+/**
+ * 自定义线程池
+ */
 public class EnvDetectTaskPool {
     private static EnvDetectTaskPool instance;
 
@@ -35,7 +38,9 @@ public class EnvDetectTaskPool {
      * 根据id移除task
      */
     public synchronized void remove(int id){
-
+        Task task=taskMap.get(id);
+        task.stop();
+        taskMap.remove(id);
     }
 
     /**
