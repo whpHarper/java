@@ -2,6 +2,7 @@ package com.task.pool;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Callable;
 
 public class Task implements Runnable {
     private int id;
@@ -57,7 +58,7 @@ public class Task implements Runnable {
     public synchronized int progress() {
         return finish*100/count;
     }
-
+    //线程方法没有提供停止方法，停止方法清理需要处理的ip即可
     public synchronized void stop(){
         ipSegmentList.clear();
     }

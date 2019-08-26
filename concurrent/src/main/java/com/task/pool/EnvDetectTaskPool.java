@@ -78,4 +78,8 @@ public class EnvDetectTaskPool {
             taskMap.remove(id);
         }
     }
+
+    public synchronized void shutdown(){
+        executor.shutdown();
+    }
 }

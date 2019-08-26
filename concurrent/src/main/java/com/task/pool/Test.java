@@ -7,5 +7,11 @@ public class Test {
         List<IPSegment> ipSegments=IPSegment.parse("192.168.1.1-192.168.1.25");
         EnvDetectTaskPool envDetectTaskPool=EnvDetectTaskPool.getInstance();
         envDetectTaskPool.execute(new Task("root","123qwe",ipSegments,1));
+      /*  try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+        envDetectTaskPool.shutdown();
     }
 }
