@@ -17,6 +17,8 @@
         <module>bases</module>
         <module>kafka</module>
         <module>concurrent</module>
+        <module>udp_moudle</module>
+        <module>socket</module>
     </modules>
 
     <properties>

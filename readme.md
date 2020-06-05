@@ -1,6 +1,6 @@
 本工程为java代码积累学习工程，各模块介绍如下
 1. bases涉及java基础内容，包含java8新特性，反射示例代码，jmx，内存获取方法，队列，反射
-    guice 包
+    guice 包:参考地址：https://zhuanlan.zhihu.com/p/32299568
 2. concurrent 涉及并发知识：
     com.task.pool 完整线程池代码示例
     simple.article 为《java并发编程》示例
