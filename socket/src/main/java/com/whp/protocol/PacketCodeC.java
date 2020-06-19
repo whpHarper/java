@@ -18,7 +18,9 @@ import java.util.Map;
  * @Version 1.0
  */
 public class PacketCodeC {
-    private static final int MAGIC_NUMBER=0x12345678;
+    public static final int MAGIC_NUMBER=0x12345678;
+    public static final PacketCodeC INSTANCE=new PacketCodeC();
+
     private static Map<Byte,Class<? extends Packet>> packetTypeMap;
     private static Map<Byte, Serializer> serializerMap;
     static {
@@ -29,8 +31,8 @@ public class PacketCodeC {
         Serializer serializer=new JsonSerializer();
         serializerMap.put( serializer.getSerialAlgorithm(),serializer );
     }
-    public ByteBuf encode(Packet packet){
-        ByteBuf buf= ByteBufAllocator.DEFAULT.ioBuffer();
+    public void  encode(ByteBuf buf,Packet packet){
+        /*ByteBuf buf= ByteBufAllocator.DEFAULT.ioBuffer();*/
         byte[] bytes=Serializer.DEFAULT.serialize( packet );
         buf.writeInt( MAGIC_NUMBER );
         buf.writeByte( packet.getVersion() );
@@ -38,7 +40,6 @@ public class PacketCodeC {
         buf.writeByte( packet.getCommand() );
         buf.writeInt( bytes.length );
         buf.writeBytes( bytes );
-        return buf;
     }
 
     public Packet decode(ByteBuf byteBuf){
