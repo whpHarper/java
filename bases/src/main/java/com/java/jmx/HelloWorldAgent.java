@@ -1,3 +1,4 @@
+/*
 package com.java.jmx;
 
 import com.sun.jdmk.comm.HtmlAdaptorServer;
@@ -10,9 +11,11 @@ import java.io.IOException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
+*/
 /**
  * @author whp 19-1-18
- */
+ *//*
+
 public class HelloWorldAgent {
     public static void main(String[] args)throws MalformedObjectNameException, NullPointerException,
             InstanceAlreadyExistsException, MBeanRegistrationException, NotCompliantMBeanException, IOException {
@@ -39,3 +42,4 @@ public class HelloWorldAgent {
         jmxConnServer.start();
     }
 }
+*/

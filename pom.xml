@@ -19,6 +19,7 @@
         <module>concurrent</module>
         <module>udp_moudle</module>
         <module>socket</module>
+        <module>graphdb</module>
     </modules>
 
     <properties>
