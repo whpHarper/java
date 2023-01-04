@@ -1,12 +1,14 @@
 package com.java.function_program.listener;
 
 import com.java.util.ClassUtil;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * 事件执行器
@@ -46,5 +48,23 @@ public class EventExecutor {
                 listener.execute(eventClass,eventMethod);
             }
         }
+    }
+
+    /**
+     * 有一个执行错误，则返回false
+     * @param eventClass
+     * @param eventMethod
+     * @return
+     * @param <T>
+     */
+    public <T extends Event> boolean execute(Class<T> eventClass, Function<T, Boolean> eventMethod){
+        List<Event> listeners = listenerMap.get(eventClass);
+        for(Event listener:listeners){
+            Boolean apply = eventMethod.apply((T) listener);
+            if(!apply){
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -20,6 +20,7 @@
         <module>udp_moudle</module>
         <module>socket</module>
         <module>graphdb</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>

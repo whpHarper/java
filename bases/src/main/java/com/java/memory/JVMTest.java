@@ -1,7 +1,9 @@
 package com.java.memory;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author whp 19-2-21
@@ -36,7 +38,12 @@ public class JVMTest {
 
     }
 
-    public static void main(String[] args){
-//        count();
+    public static void main(String[] args) {
+        Map<Integer,Integer> map=new HashMap<>();
+        map.put(1,1);
+        map.put(2,2);
+        map.put(3,3);
+        Long count = map.values().stream().filter(n -> n > 4).count();
+        System.out.println(count);
     }
 }
