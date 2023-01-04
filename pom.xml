@@ -30,7 +30,7 @@
         <storm-kafka.version>0.10.0</storm-kafka.version>
         <kafka.artifact.id>kafka_2.11</kafka.artifact.id>
         <typesafe.config.version>1.2.1</typesafe.config.version>
-        <quartz.version>2.2.1</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
         <jersey.version>1.19.1</jersey.version>
         <mapr-storm-kafka.version>1.0.1</mapr-storm-kafka.version>
         <scala.version>2.11</scala.version>
